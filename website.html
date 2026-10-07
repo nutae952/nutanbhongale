@@ -1,0 +1,1970 @@
+Create website portfolio 
+my name nutan bhongale
+i am currently pursuing BCA 1 ST SEM in SKE BCA college chandgad 
+I have technical skills PYTHON , MS office
+i have complied 10 th in S.G.V Naganvadi ,and 12th in N.B.Patil Chandagad
+i have won 3bronze madel in maharashtra state and 3 gold madel in maharashra stet , and pleyed 2 nationl campanships , and 7 gold in kolhapur distric , in ivant race walk .
+i want webiste in white , pink, blue ,colour with animation attractive
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nutan Bhongale | Portfolio</title>
+
+    <meta name="description"
+          content="Portfolio of Nutan Bhongale - BCA Student, Python & MS Office learner, and accomplished race walker.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <style>
+        /* =========================================
+           GLOBAL
+        ========================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --pink: #ff4f9a;
+            --light-pink: #ffe4f1;
+            --blue: #3b82f6;
+            --light-blue: #e0f2fe;
+            --dark-blue: #172554;
+            --white: #ffffff;
+            --text: #334155;
+            --gray: #64748b;
+            --shadow: 0 15px 40px rgba(59, 130, 246, 0.12);
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #ffffff;
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        section {
+            padding: 100px 8%;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* =========================================
+           ANIMATED BACKGROUND
+        ========================================= */
+
+        .background-shapes {
+            position: fixed;
+            inset: 0;
+            overflow: hidden;
+            z-index: -10;
+            pointer-events: none;
+        }
+
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(2px);
+            opacity: 0.35;
+            animation: floatShape 10s ease-in-out infinite;
+        }
+
+        .shape1 {
+            width: 250px;
+            height: 250px;
+            background: #ffd6e9;
+            top: 10%;
+            left: -80px;
+        }
+
+        .shape2 {
+            width: 300px;
+            height: 300px;
+            background: #dbeafe;
+            top: 50%;
+            right: -100px;
+            animation-delay: 2s;
+        }
+
+        .shape3 {
+            width: 180px;
+            height: 180px;
+            background: #fbcfe8;
+            bottom: 5%;
+            left: 30%;
+            animation-delay: 4s;
+        }
+
+        @keyframes floatShape {
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            50% {
+                transform: translate(30px, -40px) scale(1.1);
+            }
+        }
+
+        /* =========================================
+           NAVBAR
+        ========================================= */
+
+        header {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(59, 130, 246, 0.08);
+        }
+
+        nav {
+            max-width: 1200px;
+            height: 75px;
+            margin: auto;
+            padding: 0 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 800;
+            color: var(--dark-blue);
+        }
+
+        .logo span {
+            color: var(--pink);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 500;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--pink);
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--pink);
+            left: 0;
+            bottom: -6px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 27px;
+            cursor: pointer;
+            color: var(--dark-blue);
+        }
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        #home {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 130px;
+        }
+
+        .hero {
+            max-width: 1200px;
+            margin: auto;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .hero-text {
+            animation: heroText 1s ease forwards;
+        }
+
+        @keyframes heroText {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .small-title {
+            color: var(--pink);
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        .hero h1 {
+            font-size: clamp(45px, 6vw, 75px);
+            line-height: 1.05;
+            color: var(--dark-blue);
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: var(--pink);
+        }
+
+        .hero h2 {
+            font-size: 24px;
+            color: var(--blue);
+            margin-bottom: 20px;
+            min-height: 36px;
+        }
+
+        .hero p {
+            max-width: 620px;
+            color: var(--gray);
+            line-height: 1.9;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            color: white;
+            background: linear-gradient(135deg, var(--pink), var(--blue));
+            box-shadow: 0 10px 25px rgba(255, 79, 154, 0.25);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--blue);
+            color: var(--blue);
+        }
+
+        .btn-outline:hover {
+            background: var(--blue);
+            color: white;
+            transform: translateY(-4px);
+        }
+
+        /* HERO CARD */
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            animation: heroImage 1.2s ease forwards;
+        }
+
+        @keyframes heroImage {
+            from {
+                opacity: 0;
+                transform: translateX(50px) scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0) scale(1);
+            }
+        }
+
+        .profile-card {
+            width: 350px;
+            height: 430px;
+            border-radius: 40px;
+            background: linear-gradient(145deg, #ffffff, #fff0f7);
+            box-shadow: 0 30px 70px rgba(59, 130, 246, 0.18);
+            border: 5px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-card::before {
+            content: "";
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ffb7d6, #93c5fd);
+            top: -80px;
+            right: -70px;
+            opacity: 0.7;
+        }
+
+        .profile-circle {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--pink), var(--blue));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 80px;
+            font-weight: 800;
+            z-index: 2;
+            box-shadow: 0 20px 50px rgba(59, 130, 246, 0.3);
+            animation: profileFloat 4s ease-in-out infinite;
+        }
+
+        @keyframes profileFloat {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .card-badge {
+            position: absolute;
+            bottom: 35px;
+            background: white;
+            padding: 12px 22px;
+            border-radius: 30px;
+            box-shadow: var(--shadow);
+            color: var(--dark-blue);
+            font-weight: 600;
+            z-index: 3;
+        }
+
+        /* =========================================
+           SECTION TITLES
+        ========================================= */
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title span {
+            color: var(--pink);
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .section-title h2 {
+            font-size: 42px;
+            color: var(--dark-blue);
+            margin-top: 8px;
+        }
+
+        .section-title p {
+            max-width: 600px;
+            margin: 15px auto 0;
+            color: var(--gray);
+            line-height: 1.8;
+        }
+
+        /* =========================================
+           ABOUT
+        ========================================= */
+
+        #about {
+            background: linear-gradient(180deg, #ffffff, #fff7fb);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-box {
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--pink);
+        }
+
+        .about-box h3 {
+            color: var(--dark-blue);
+            font-size: 27px;
+            margin-bottom: 15px;
+        }
+
+        .about-box p {
+            color: var(--gray);
+            line-height: 1.9;
+        }
+
+        .info-list {
+            display: grid;
+            gap: 18px;
+        }
+
+        .info-item {
+            padding: 20px;
+            background: white;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.08);
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            transition: 0.3s;
+        }
+
+        .info-item:hover {
+            transform: translateX(8px);
+        }
+
+        .info-icon {
+            min-width: 45px;
+            height: 45px;
+            border-radius: 14px;
+            background: var(--light-pink);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--pink);
+            font-size: 20px;
+        }
+
+        .info-item h4 {
+            color: var(--dark-blue);
+        }
+
+        .info-item p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        /* =========================================
+           EDUCATION
+        ========================================= */
+
+        .timeline {
+            max-width: 850px;
+            margin: auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 20px;
+            top: 0;
+            height: 100%;
+            width: 3px;
+            background: linear-gradient(var(--pink), var(--blue));
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 65px;
+            margin-bottom: 40px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 8px;
+            top: 5px;
+            width: 27px;
+            height: 27px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--pink), var(--blue));
+            border: 5px solid white;
+            box-shadow: 0 0 0 4px #ffe4f1;
+        }
+
+        .timeline-card {
+            background: white;
+            padding: 28px;
+            border-radius: 22px;
+            box-shadow: var(--shadow);
+            transition: 0.3s;
+        }
+
+        .timeline-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .timeline-card h3 {
+            color: var(--dark-blue);
+            margin-bottom: 8px;
+        }
+
+        .timeline-card p {
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        .timeline-card .year {
+            color: var(--pink);
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        /* =========================================
+           SKILLS
+        ========================================= */
+
+        #skills {
+            background: #f8fbff;
+        }
+
+        .skills-grid {
+            max-width: 850px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: var(--shadow);
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .skill-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .skill-top h3 {
+            color: var(--dark-blue);
+        }
+
+        .skill-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 15px;
+            background: var(--light-blue);
+            color: var(--blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .skill-bar {
+            height: 9px;
+            background: #e2e8f0;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            width: 0;
+            border-radius: 20px;
+            background: linear-gradient(90deg, var(--pink), var(--blue));
+            transition: width 1.5s ease;
+        }
+
+        /* =========================================
+           ACHIEVEMENTS
+        ========================================= */
+
+        #achievements {
+            background: linear-gradient(180deg, #fff7fb, #ffffff);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 30px 15px;
+            background: white;
+            border-radius: 25px;
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--pink);
+        }
+
+        .stat-card:nth-child(even) {
+            border-top-color: var(--blue);
+        }
+
+        .stat-card h3 {
+            font-size: 40px;
+            color: var(--dark-blue);
+        }
+
+        .stat-card h3 span {
+            color: var(--pink);
+        }
+
+        .stat-card p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .achievement-card {
+            background: white;
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+            transition: 0.4s;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .achievement-card::after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: var(--light-pink);
+            border-radius: 50%;
+            right: -30px;
+            top: -30px;
+        }
+
+        .achievement-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .achievement-card h3 {
+            color: var(--dark-blue);
+            margin-bottom: 10px;
+        }
+
+        .achievement-card p {
+            color: var(--gray);
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        /* =========================================
+           RACE WALK
+        ========================================= */
+
+        .race-box {
+            margin-top: 60px;
+            padding: 50px;
+            border-radius: 35px;
+            background: linear-gradient(135deg, #172554, #2563eb);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .race-box::before,
+        .race-box::after {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.08);
+        }
+
+        .race-box::before {
+            width: 300px;
+            height: 300px;
+            right: -80px;
+            top: -100px;
+        }
+
+        .race-box::after {
+            width: 200px;
+            height: 200px;
+            left: -70px;
+            bottom: -100px;
+        }
+
+        .race-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+        }
+
+        .race-content h2 {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .race-content p {
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        /* =========================================
+           CONTACT
+        ========================================= */
+
+        #contact {
+            background: #f8fbff;
+        }
+
+        .contact-container {
+            max-width: 900px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 35px;
+            border-radius: 25px;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-card h3 {
+            color: var(--dark-blue);
+            margin-bottom: 15px;
+            font-size: 25px;
+        }
+
+        .contact-card p {
+            color: var(--gray);
+            line-height: 1.8;
+        }
+
+        .contact-info {
+            margin-top: 25px;
+            display: grid;
+            gap: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .contact-item-icon {
+            width: 45px;
+            height: 45px;
+            background: var(--light-pink);
+            color: var(--pink);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-item strong {
+            color: var(--dark-blue);
+        }
+
+        .contact-item small {
+            color: var(--gray);
+        }
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+            padding: 35px 8%;
+            background: var(--dark-blue);
+            color: white;
+            text-align: center;
+        }
+
+        footer p {
+            opacity: 0.8;
+            font-size: 14px;
+        }
+
+        footer span {
+            color: #ff8fc1;
+        }
+
+        /* =========================================
+           SCROLL REVEAL
+        ========================================= */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 900px) {
+
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .achievement-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            section {
+                padding: 75px 5%;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 75px;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 25px;
+                gap: 20px;
+                transform: translateY(-150%);
+                transition: 0.4s;
+                box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+            }
+
+            .nav-links.active {
+                transform: translateY(0);
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .section-title h2 {
+                font-size: 32px;
+            }
+
+            .profile-card {
+                width: 290px;
+                height: 360px;
+            }
+
+            .profile-circle {
+                width: 180px;
+                height: 180px;
+                font-size: 65px;
+            }
+
+            .skills-grid,
+            .achievement-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .race-box {
+                padding: 35px 25px;
+            }
+
+            .race-content h2 {
+                font-size: 27px;
+            }
+        }
+
+        @media (max-width: 450px) {
+
+            .hero h1 {
+                font-size: 43px;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .about-box {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================================
+         ANIMATED BACKGROUND
+    ========================================== -->
+
+    <div class="background-shapes">
+        <div class="shape shape1"></div>
+        <div class="shape shape2"></div>
+        <div class="shape shape3"></div>
+    </div>
+
+
+    <!-- =========================================
+         NAVBAR
+    ========================================== -->
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+                Nutan<span>.</span>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="menu-btn" id="menuBtn">
+                ☰
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================================
+         HERO
+    ========================================== -->
+
+    <section id="home">
+
+        <div class="hero">
+
+            <div class="hero-text">
+
+                <div class="small-title">
+                    👋 WELCOME TO MY PORTFOLIO
+                </div>
+
+                <h1>
+                    Hi, I'm <span>Nutan</span><br>
+                    Bhongale
+                </h1>
+
+                <h2>
+                    I am a <span id="typing"></span>
+                </h2>
+
+                <p>
+                    I am currently pursuing BCA 1st Semester at
+                    SKE BCA College, Chandgad. I am passionate about
+                    technology, learning new skills and athletics,
+                    especially race walking.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#about" class="btn btn-primary">
+                        Explore My Portfolio
+                    </a>
+
+                    <a href="#achievements" class="btn btn-outline">
+                        My Achievements
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-image">
+
+                <div class="profile-card">
+
+                    <div class="profile-circle">
+                        NB
+                    </div>
+
+                    <div class="card-badge">
+                        🎓 BCA Student
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         ABOUT
+    ========================================== -->
+
+    <section id="about">
+
+        <div class="container">
+
+            <div class="section-title reveal">
+                <span>ABOUT ME</span>
+                <h2>Who I Am</h2>
+
+                <p>
+                    A passionate student combining technology,
+                    education and sports.
+                </p>
+            </div>
+
+
+            <div class="about-grid">
+
+                <div class="about-box reveal">
+
+                    <h3>Hello! I'm Nutan 👋</h3>
+
+                    <p>
+                        I am Nutan Bhongale, currently pursuing
+                        BCA 1st Semester at SKE BCA College,
+                        Chandgad.
+
+                        I am interested in computer technology
+                        and continuously developing my technical
+                        knowledge. Along with academics, I have a
+                        strong passion for athletics and race walking.
+
+                        My journey in sports has helped me develop
+                        discipline, confidence, dedication and
+                        determination.
+                    </p>
+
+                </div>
+
+
+                <div class="info-list">
+
+                    <div class="info-item reveal">
+
+                        <div class="info-icon">
+                            🎓
+                        </div>
+
+                        <div>
+                            <h4>Current Education</h4>
+                            <p>BCA 1st Semester - SKE BCA College, Chandgad</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-item reveal">
+
+                        <div class="info-icon">
+                            💻
+                        </div>
+
+                        <div>
+                            <h4>Technical Skills</h4>
+                            <p>Python & MS Office</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-item reveal">
+
+                        <div class="info-icon">
+                            🏃
+                        </div>
+
+                        <div>
+                            <h4>Sport</h4>
+                            <p>Athletics - Race Walk</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-item reveal">
+
+                        <div class="info-icon">
+                            🏆
+                        </div>
+
+                        <div>
+                            <h4>Sports Achievements</h4>
+                            <p>State, National & District level achievements</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         EDUCATION
+    ========================================== -->
+
+    <section id="education">
+
+        <div class="container">
+
+            <div class="section-title reveal">
+
+                <span>MY JOURNEY</span>
+
+                <h2>Education</h2>
+
+                <p>
+                    My academic journey so far.
+                </p>
+
+            </div>
+
+
+            <div class="timeline">
+
+                <div class="timeline-item reveal">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-card">
+
+                        <div class="year">
+                            CURRENT
+                        </div>
+
+                        <h3>
+                            Bachelor of Computer Applications
+                        </h3>
+
+                        <p>
+                            SKE BCA College, Chandgad
+                        </p>
+
+                        <p>
+                            Currently pursuing BCA - 1st Semester.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="timeline-item reveal">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-card">
+
+                        <div class="year">
+                            12th STANDARD
+                        </div>
+
+                        <h3>
+                            Higher Secondary Education
+                        </h3>
+
+                        <p>
+                            N. B. Patil College, Chandgad
+                        </p>
+
+                        <p>
+                            Successfully completed 12th standard.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="timeline-item reveal">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-card">
+
+                        <div class="year">
+                            10th STANDARD
+                        </div>
+
+                        <h3>
+                            Secondary Education
+                        </h3>
+
+                        <p>
+                            S.G.V. Naganvadi
+                        </p>
+
+                        <p>
+                            Successfully completed 10th standard.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         SKILLS
+    ========================================== -->
+
+    <section id="skills">
+
+        <div class="container">
+
+            <div class="section-title reveal">
+
+                <span>WHAT I KNOW</span>
+
+                <h2>Technical Skills</h2>
+
+                <p>
+                    Skills I am currently learning and developing.
+                </p>
+
+            </div>
+
+
+            <div class="skills-grid">
+
+                <div class="skill-card reveal">
+
+                    <div class="skill-top">
+
+                        <h3>Python</h3>
+
+                        <div class="skill-icon">
+                            Py
+                        </div>
+
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="75%"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-card reveal">
+
+                    <div class="skill-top">
+
+                        <h3>MS Office</h3>
+
+                        <div class="skill-icon">
+                            MS
+                        </div>
+
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="85%"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         ACHIEVEMENTS
+    ========================================== -->
+
+    <section id="achievements">
+
+        <div class="container">
+
+            <div class="section-title reveal">
+
+                <span>MY SUCCESS</span>
+
+                <h2>Sports Achievements</h2>
+
+                <p>
+                    My journey and achievements in race walking.
+                </p>
+
+            </div>
+
+
+            <!-- STATS -->
+
+            <div class="stats">
+
+                <div class="stat-card reveal">
+
+                    <h3>
+                        <span class="counter" data-target="3">0</span>
+                    </h3>
+
+                    <p>
+                        Bronze Medals - Maharashtra State
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card reveal">
+
+                    <h3>
+                        <span class="counter" data-target="3">0</span>
+                    </h3>
+
+                    <p>
+                        Gold Medals - Maharashtra State
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card reveal">
+
+                    <h3>
+                        <span class="counter" data-target="2">0</span>
+                    </h3>
+
+                    <p>
+                        National Championships
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card reveal">
+
+                    <h3>
+                        <span class="counter" data-target="7">0</span>
+                    </h3>
+
+                    <p>
+                        Gold Medals - Kolhapur District
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ACHIEVEMENT CARDS -->
+
+            <div class="achievement-grid">
+
+                <div class="achievement-card reveal">
+
+                    <div class="achievement-icon">
+                        🥉
+                    </div>
+
+                    <h3>
+                        3 Bronze Medals
+                    </h3>
+
+                    <p>
+                        Won 3 bronze medals at the
+                        Maharashtra State level in
+                        race walking.
+                    </p>
+
+                </div>
+
+
+                <div class="achievement-card reveal">
+
+                    <div class="achievement-icon">
+                        🥇
+                    </div>
+
+                    <h3>
+                        3 Gold Medals
+                    </h3>
+
+                    <p>
+                        Won 3 gold medals at the
+                        Maharashtra State level in
+                        race walking.
+                    </p>
+
+                </div>
+
+
+                <div class="achievement-card reveal">
+
+                    <div class="achievement-icon">
+                        🏅
+                    </div>
+
+                    <h3>
+                        2 National Championships
+                    </h3>
+
+                    <p>
+                        Participated in 2 national-level
+                        championships representing
+                        my sporting journey.
+                    </p>
+
+                </div>
+
+
+                <div class="achievement-card reveal">
+
+                    <div class="achievement-icon">
+                        🏆
+                    </div>
+
+                    <h3>
+                        7 District Gold Medals
+                    </h3>
+
+                    <p>
+                        Won 7 gold medals at the
+                        Kolhapur District level
+                        in race walking.
+                    </p>
+
+                </div>
+
+
+                <div class="achievement-card reveal">
+
+                    <div class="achievement-icon">
+                        🚶‍♀️
+                    </div>
+
+                    <h3>
+                        Race Walking
+                    </h3>
+
+                    <p>
+                        Passionate about athletics
+                        and race walking with
+                        continuous participation
+                        in competitions.
+                    </p>
+
+                </div>
+
+
+                <div class="achievement-card reveal">
+
+                    <div class="achievement-icon">
+                        ⭐
+                    </div>
+
+                    <h3>
+                        Determination
+                    </h3>
+
+                    <p>
+                        Sports has taught me discipline,
+                        patience, confidence and the
+                        importance of consistent effort.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- RACE WALK BANNER -->
+
+            <div class="race-box reveal">
+
+                <div class="race-content">
+
+                    <h2>
+                        🏃‍♀️ My Passion: Race Walking
+                    </h2>
+
+                    <p>
+                        My sporting journey has been an important
+                        part of my life. From district-level
+                        competitions to Maharashtra State
+                        competitions and national championships,
+                        every race has taught me to keep moving
+                        forward and never give up.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         CONTACT
+    ========================================== -->
+
+    <section id="contact">
+
+        <div class="container">
+
+            <div class="section-title reveal">
+
+                <span>GET IN TOUCH</span>
+
+                <h2>Contact Me</h2>
+
+                <p>
+                    Feel free to connect with me.
+                </p>
+
+            </div>
+
+
+            <div class="contact-container">
+
+                <div class="contact-card reveal">
+
+                    <h3>
+                        Let's Connect ✨
+                    </h3>
+
+                    <p>
+                        I am interested in learning new
+                        technologies, improving my skills,
+                        and exploring opportunities related
+                        to computer applications and sports.
+                    </p>
+
+
+                    <div class="contact-info">
+
+                        <div class="contact-item">
+
+                            <div class="contact-item-icon">
+                                🎓
+                            </div>
+
+                            <div>
+                                <strong>Education</strong><br>
+                                <small>
+                                    BCA 1st Semester
+                                </small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-item-icon">
+                                💻
+                            </div>
+
+                            <div>
+                                <strong>Skills</strong><br>
+                                <small>
+                                    Python & MS Office
+                                </small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-item-icon">
+                                🏃
+                            </div>
+
+                            <div>
+                                <strong>Sport</strong><br>
+                                <small>
+                                    Race Walking
+                                </small>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-card reveal">
+
+                    <h3>
+                        My Goal 🎯
+                    </h3>
+
+                    <p>
+                        My goal is to continue improving
+                        my technical knowledge while
+                        maintaining my passion for athletics.
+                        I believe that education, discipline
+                        and hard work can create a successful
+                        future.
+                    </p>
+
+                    <br>
+
+                    <a href="#home" class="btn btn-primary">
+                        Back to Top ↑
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+        <p>
+            © 2026 <span>Nutan Bhongale</span>.
+            All Rights Reserved.
+        </p>
+
+        <p style="margin-top:8px;">
+            BCA Student | Python Learner | Race Walker
+        </p>
+
+    </footer>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script>
+
+        /* =========================================
+           MOBILE MENU
+        ========================================== */
+
+        const menuBtn = document.getElementById("menuBtn");
+        const navLinks = document.getElementById("navLinks");
+
+        menuBtn.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+
+        document.querySelectorAll(".nav-links a").forEach(link => {
+
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("active");
+            });
+
+        });
+
+
+        /* =========================================
+           TYPING ANIMATION
+        ========================================== */
+
+        const typingElement = document.getElementById("typing");
+
+        const words = [
+            "BCA Student",
+            "Python Learner",
+            "Athlete",
+            "Race Walker"
+        ];
+
+        let wordIndex = 0;
+        let charIndex = 0;
+        let deleting = false;
+
+        function typeEffect() {
+
+            const currentWord = words[wordIndex];
+
+            if (!deleting) {
+
+                typingElement.textContent =
+                    currentWord.substring(0, charIndex + 1);
+
+                charIndex++;
+
+                if (charIndex === currentWord.length) {
+
+                    deleting = true;
+
+                    setTimeout(typeEffect, 1500);
+
+                    return;
+                }
+
+            } else {
+
+                typingElement.textContent =
+                    currentWord.substring(0, charIndex - 1);
+
+                charIndex--;
+
+                if (charIndex === 0) {
+
+                    deleting = false;
+
+                    wordIndex++;
+
+                    if (wordIndex >= words.length) {
+                        wordIndex = 0;
+                    }
+
+                }
+
+            }
+
+            setTimeout(typeEffect, deleting ? 60 : 100);
+        }
+
+        typeEffect();
+
+
+        /* =========================================
+           SCROLL REVEAL
+        ========================================== */
+
+        const reveals = document.querySelectorAll(".reveal");
+
+        function revealOnScroll() {
+
+            const windowHeight = window.innerHeight;
+
+            reveals.forEach(element => {
+
+                const elementTop =
+                    element.getBoundingClientRect().top;
+
+                if (elementTop < windowHeight - 100) {
+
+                    element.classList.add("active");
+
+                }
+
+            });
+
+        }
+
+        window.addEventListener("scroll", revealOnScroll);
+
+        revealOnScroll();
+
+
+        /* =========================================
+           SKILL BAR ANIMATION
+        ========================================== */
+
+        const skillProgress =
+            document.querySelectorAll(".skill-progress");
+
+        let skillsAnimated = false;
+
+        function animateSkills() {
+
+            const skillsSection =
+                document.getElementById("skills");
+
+            const sectionTop =
+                skillsSection.getBoundingClientRect().top;
+
+            if (
+                sectionTop <
+                window.innerHeight - 100 &&
+                !skillsAnimated
+            ) {
+
+                skillProgress.forEach(progress => {
+
+                    progress.style.width =
+                        progress.dataset.width;
+
+                });
+
+                skillsAnimated = true;
+            }
+
+        }
+
+        window.addEventListener("scroll", animateSkills);
+
+
+        /* =========================================
+           COUNTER ANIMATION
+        ========================================== */
+
+        const counters =
+            document.querySelectorAll(".counter");
+
+        let countersAnimated = false;
+
+        function animateCounters() {
+
+            const achievementSection =
+                document.getElementById("achievements");
+
+            const sectionTop =
+                achievementSection.getBoundingClientRect().top;
+
+            if (
+                sectionTop <
+                window.innerHeight - 100 &&
+                !countersAnimated
+            ) {
+
+                counters.forEach(counter => {
+
+                    const target =
+                        Number(counter.dataset.target);
+
+                    let current = 0;
+
+                    const increment =
+                        Math.max(1, Math.ceil(target / 40));
+
+                    const updateCounter = () => {
+
+                        current += increment;
+
+                        if (current >= target) {
+
+                            counter.textContent = target;
+
+                        } else {
+
+                            counter.textContent = current;
+
+                            requestAnimationFrame(updateCounter);
+                        }
+
+                    };
+
+                    updateCounter();
+
+                });
+
+                countersAnimated = true;
+            }
+
+        }
+
+        window.addEventListener("scroll", animateCounters);
+
+    </script>
+
+</body>
+</html>
